@@ -107,3 +107,6 @@ wait
 # ) &
 
 wait
+
+# echo "Plugins that havn't been updated by this script:"
+find */*/*/.git -prune -mtime 0.01
