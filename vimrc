@@ -126,6 +126,11 @@ set wildmenu
 " Netrw config
 let g:netrw_banner=0 " disable annoying banner
 
+set mouse=a
+" When running tmux, the escape sequence which provides the xterm version
+" doesn't work, so we need to manually say that we can handle nice xterm2
+" mouse features manually.
+set ttymouse=xterm2
 
 
 " SNIPPETS:
