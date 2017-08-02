@@ -13,12 +13,14 @@ set background=dark
 
 " Set some sensible diff colours.
 " Seriously, the defaults are not easy to comprehend.
-" Additions are are green
-highlight DiffAdd ctermbg=2
-" Deletions are red
-highlight DiffDelete ctermbg=1
-" Modifications are black
-highlight DiffChange ctermbg=0
+" Additions are are dark green
+highlight DiffAdd ctermbg=22
+" Deleted lines are dark grey
+highlight DiffDelete ctermbg=233
+" Modified lines are dark grey
+highlight DiffChange ctermbg=233
+" Modified words are a slightly lighter grey
+highlight DiffText ctermbg=236
 " }}}
 
 " Buffer Options {{{
@@ -61,7 +63,7 @@ set ttimeoutlen=0
 " set colorcolumn=+1
 " highlight ColorColumn ctermbg=Black
 set formatoptions+=j " see :h fo-table
-set cursorline
+" set cursorline
 " }}}
 
 " Searching {{{
@@ -126,14 +128,12 @@ set wildmenu
 " Netrw config
 let g:netrw_banner=0 " disable annoying banner
 
+" Get that mouse goodness going
 set mouse=a
 " When running tmux, the escape sequence which provides the xterm version
 " doesn't work, so we need to manually say that we can handle nice xterm2
 " mouse features manually.
 set ttymouse=xterm2
 
-
-" SNIPPETS:
-
-" Read an empty HTML template and move cursor to title
-" nnoremap <leader>html :-1read $HOME/.vim/.skeleton.html<CR>?<title>\zs<CR>i
+set clipboard=unnamedplus
+" set clipboard=unnamed

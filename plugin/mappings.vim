@@ -104,10 +104,10 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
 xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
 function! s:VSetSearch()
-  let temp = @s
+  let temp=@s
   norm! gv"sy
-  let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
-  let @s = temp
+  let @/='\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
+  let @s=temp
 endfunction
 
 
