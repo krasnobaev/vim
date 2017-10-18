@@ -65,7 +65,7 @@ package https://github.com/elzr/vim-json &
 package https://github.com/rust-lang/rust.vim &
 package https://github.com/racer-rust/racer &
 
-https://github.com/lervag/vimtex
+package https://github.com/lervag/vimtex &
 wait
 ) &
 
