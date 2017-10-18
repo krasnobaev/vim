@@ -37,74 +37,86 @@ function package () {
 }
 
 (
-set_group staging
-package https://github.com/fatih/vim-go.git &
-package https://github.com/tpope/vim-rhubarb.git &
-package https://github.com/dhruvasagar/vim-table-mode.git &
-wait
-) &
-
-(
 set_group tpope
 # package https://github.com/tpope/vim-dispatch.git &
 # package https://github.com/tpope/vim-jdaddy.git &
 package https://github.com/tpope/vim-fugitive.git &
 package https://github.com/tpope/vim-surround.git &
-package https://github.com/tpope/vim-ragtag.git &
-package https://github.com/tpope/vim-abolish.git &
+# package https://github.com/tpope/vim-ragtag.git &
+# package https://github.com/tpope/vim-abolish.git &
 package https://github.com/tpope/vim-repeat.git &
-package https://github.com/tpope/vim-commentary.git &
-package https://github.com/tpope/vim-projectionist.git &
+# package https://github.com/tpope/vim-commentary.git &
+# package https://github.com/tpope/vim-projectionist.git &
+# package https://github.com/tpope/vim-markdown.git &
 # package https://github.com/tpope/vim-vinegar.git &
 wait
 ) &
 
 (
-set_group ruby
-package https://github.com/tpope/vim-rails.git &
-package https://github.com/tpope/vim-rake.git &
-package https://github.com/tpope/vim-bundler.git &
-package https://github.com/tpope/vim-endwise.git &
+set_group language
+package https://github.com/vim-syntastic/syntastic &
+package https://github.com/scrooloose/nerdcommenter &
+
+package https://github.com/plasticboy/vim-markdown &
+
+package https://github.com/pangloss/vim-javascript &
+package https://github.com/elzr/vim-json &
+
+package https://github.com/rust-lang/rust.vim &
+package https://github.com/racer-rust/racer &
+
+https://github.com/lervag/vimtex
 wait
 ) &
 
 (
-set_group snippets
-# Vim-snipmate and dependencies - VimL but buggy
-package https://github.com/MarcWeber/vim-addon-mw-utils.git &
-package https://github.com/tomtom/tlib_vim.git &
-package https://github.com/garbas/vim-snipmate.git &
-# Ultisnips is python but more functional
-# package https://github.com/SirVer/ultisnips.git &
+set_group completion
+package https://github.com/valloric/youcompleteme &
+package https://github.com/honza/vim-snippets &
+package https://github.com/ervandew/supertab &
+
+package https://github.com/eagletmt/neco-ghc &
+wait
+) &
+
+(
+set_group codedisplay
+package https://github.com/altercation/vim-colors-solarized &
+package https://github.com/godlygeek/tabular &
+wait
+) &
+
+(
+set_group interface
+package https://github.com/scrooloose/nerdtree &
+package https://github.com/ctrlpvim/ctrlp.vim &
+package https://github.com/vim-airline/vim-airline &
+package https://github.com/majutsushi/tagbar &
+package https://github.com/airblade/vim-gitgutter &
+package https://github.com/thaerkh/vim-workspace &
+wait
+) &
+
+(
+set_group commands
+package https://github.com/easymotion/vim-easymotion &
+package https://github.com/shougo/vimproc.vim &
 wait
 ) &
 
 (
 set_group tmux
 package https://github.com/christoomey/vim-tmux-navigator.git &
+package https://github.com/tmux-plugins/vim-tmux.git &
 wait
 ) &
 
 (
 set_group syntax
-package https://github.com/kchmck/vim-coffee-script.git &
-package https://github.com/tpope/vim-markdown.git &
-package https://github.com/ap/vim-css-color.git &
-package https://github.com/pearofducks/ansible-vim.git &
-package https://github.com/vim-scripts/applescript.vim.git &
-package https://github.com/tmux-plugins/vim-tmux.git &
-package https://github.com/Matt-Deacalion/vim-systemd-syntax.git &
 package https://github.com/salomvary/vim-eslint-compiler.git &
 package https://github.com/hashivim/vim-terraform.git &
 wait
 ) &
-
-
-# (
-# set_group colorschemes
-# package https://github.com/altercation/vim-colors-solarized.git &
-# wait
-# ) &
 
 wait
 
